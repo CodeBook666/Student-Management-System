@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="650" pageHeight="842" columnWidth="610" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="153881f2-49b2-48da-9cd1-0208d2ebaad7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `BookID`, `BookName`, `Category`, `Author` FROM `booklist`]]>
+	</queryString>
+	<field name="BookID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BookName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Category" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Author" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="130" y="0" width="385" height="39" forecolor="#009999" uuid="bc6afb43-e978-483e-b16c-42ea977a7e6b"/>
+				<textElement>
+					<font size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Library Management System]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="57" splitType="Stretch">
+			<staticText>
+				<reportElement x="201" y="0" width="213" height="33" forecolor="#009999" uuid="b4931ca1-b71e-459e-a515-2f75b00f54e5"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Libray Book's Details Report]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="2" width="100" height="20" forecolor="#000099" uuid="96a3c9fb-7fc8-490f-901c-1eb36953593b"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BookID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="2" width="100" height="20" forecolor="#000099" uuid="305d08bf-9968-4553-b907-e5d3e6a898ab"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BookName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="2" width="100" height="20" forecolor="#000099" uuid="c23557cd-417b-4d53-9d93-0ea8cbbcab90"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="2" width="100" height="20" forecolor="#000099" uuid="c85bd660-e74f-4be2-a39e-e6c86f81d9d5"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Author]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="12" y="10" width="100" height="20" uuid="f270eba0-f9ae-4dc1-903c-df0975e28008"/>
+				<textFieldExpression><![CDATA[$F{BookID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="147" y="10" width="100" height="20" uuid="eb0ea222-16b4-4e18-8a24-dff611faeb1a"/>
+				<textFieldExpression><![CDATA[$F{BookName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="10" width="100" height="20" uuid="92a42d16-7bbf-424a-a419-9fa2fe9402b4"/>
+				<textFieldExpression><![CDATA[$F{Category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="477" y="12" width="100" height="20" uuid="fb08bf35-487e-432f-bb90-b649d0080d7a"/>
+				<textFieldExpression><![CDATA[$F{Author}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
